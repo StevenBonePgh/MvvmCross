@@ -8,7 +8,6 @@ using System.Linq;
 using System.Reflection;
 using MvvmCross.Base;
 using MvvmCross.Commands;
-using MvvmCross.Exceptions;
 using MvvmCross.IoC;
 using MvvmCross.Logging;
 using MvvmCross.Logging.LogProviders;
@@ -30,7 +29,9 @@ namespace MvvmCross.Core
             ViewAssemblies = assemblies;
             if (!(ViewAssemblies?.Any() ?? false))
             {
-                ViewAssemblies = new[] { Assembly.GetEntryAssembly() ?? Assembly.GetCallingAssembly() };
+                // fall back to all assemblies. Assembly.GetEntryAssembly() always returns
+                // null on Xamarin platforms do not use it!
+                ViewAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             }
 
             // Avoid creating the instance of Setup right now, instead
@@ -287,15 +288,14 @@ namespace MvvmCross.Core
         {
             var mvvmCrossAssemblyName = typeof(MvxPluginAttribute).Assembly.GetName().Name;
 
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+
             var pluginAssemblies =
-                AppDomain.CurrentDomain
-                    .GetAssemblies()
+                assemblies
                     .AsParallel()
-                    .Where(asmb=> AssemblyReferencesMvvmCross(asmb, mvvmCrossAssemblyName));
+                    .Where(asmb => AssemblyReferencesMvvmCross(asmb, mvvmCrossAssemblyName));
 
             return pluginAssemblies;
-
-
         }
 
         private bool AssemblyReferencesMvvmCross(Assembly assembly, string mvvmCrossAssemblyName)
@@ -495,9 +495,9 @@ namespace MvvmCross.Core
     }
 
     public abstract class MvxSetup<TApplication> : MvxSetup
-        where TApplication : IMvxApplication, new()
+        where TApplication : class, IMvxApplication, new()
     {
-        protected override IMvxApplication CreateApp() => Mvx.IocConstruct<TApplication>();
+        protected override IMvxApplication CreateApp() => Mvx.IoCConstruct<TApplication>();
 
         public override IEnumerable<Assembly> GetViewModelAssemblies()
         {

@@ -1,5 +1,146 @@
 # Change Log
 
+## [Unreleased](https://github.com/MvvmCross/MvvmCross/tree/HEAD)
+
+[Full Changelog](https://github.com/MvvmCross/MvvmCross/compare/6.1.2...HEAD)
+
+**Closed issues:**
+
+- Android: Registering MvxLanguageConverter for Resx localization broke [\#2967](https://github.com/MvvmCross/MvvmCross/issues/2967)
+- MvxFormsAppCompatActivity.OnBackPressed assumes the standard Forms page presenter is being used [\#2965](https://github.com/MvvmCross/MvvmCross/issues/2965)
+
+**Merged pull requests:**
+
+- Implementing INotifyPropertyChanging [\#2943](https://github.com/MvvmCross/MvvmCross/pull/2943) ([nickrandolph](https://github.com/nickrandolph))
+- Improve issue templates [\#2940](https://github.com/MvvmCross/MvvmCross/pull/2940) ([willsb](https://github.com/willsb))
+
+## [6.1.2](https://github.com/MvvmCross/MvvmCross/tree/6.1.2) (2018-06-18)
+[Full Changelog](https://github.com/MvvmCross/MvvmCross/compare/6.1.1...6.1.2)
+
+**Closed issues:**
+
+- Binding stop working after upgrade from 6.0.1 to 6.1.1 on Xamarin.Forms [\#2960](https://github.com/MvvmCross/MvvmCross/issues/2960)
+
+**Merged pull requests:**
+
+- Use interface instead of class for forms presenter [\#2966](https://github.com/MvvmCross/MvvmCross/pull/2966) ([martijn00](https://github.com/martijn00))
+- Binding to Child View's BindingContextProperty [\#2959](https://github.com/MvvmCross/MvvmCross/pull/2959) ([borbmizzet](https://github.com/borbmizzet))
+
+## [6.1.1](https://github.com/MvvmCross/MvvmCross/tree/6.1.1) (2018-06-12)
+[Full Changelog](https://github.com/MvvmCross/MvvmCross/compare/6.1.0...6.1.1)
+
+**Fixed bugs:**
+
+- MvxSetup Assembly.GetEntryAssembly\(\) returns null [\#2957](https://github.com/MvvmCross/MvvmCross/issues/2957)
+
+**Closed issues:**
+
+- \[Android\] 6.1 hangs on splash screen [\#2955](https://github.com/MvvmCross/MvvmCross/issues/2955)
+- The app stuck at Splash Screen when using MVVMCross 6.x [\#2953](https://github.com/MvvmCross/MvvmCross/issues/2953)
+- Nightly builds are not updated [\#2948](https://github.com/MvvmCross/MvvmCross/issues/2948)
+- Failed to resolve "MvvmCross.Core.MvxSetup" reference from "MvvmCross, Version=6.1.0.0, Culture=neutral, PublicKeyToken=null" [\#2956](https://github.com/MvvmCross/MvvmCross/issues/2956)
+- Playground.Forms.Droid can't run [\#2951](https://github.com/MvvmCross/MvvmCross/issues/2951)
+
+**Merged pull requests:**
+
+- Use AppDomain.CurrentDomain to find assemblies.  [\#2958](https://github.com/MvvmCross/MvvmCross/pull/2958) ([Cheesebaron](https://github.com/Cheesebaron))
+
+## [6.1.0](https://github.com/MvvmCross/MvvmCross/tree/6.1.0) (2018-06-11)
+[Full Changelog](https://github.com/MvvmCross/MvvmCross/compare/6.1.0-beta2...6.1.0)
+
+**Fixed bugs:**
+
+- MvvmCross.Forms blank page when binding to bool in xaml with MvxBind [\#2623](https://github.com/MvvmCross/MvvmCross/issues/2623)
+- \[LowMemory\] Issue when XF app wakes after resource-intensive game on Android [\#2430](https://github.com/MvvmCross/MvvmCross/issues/2430)
+- Support for ViewModel as BindableProperty [\#2934](https://github.com/MvvmCross/MvvmCross/pull/2934) ([martijn00](https://github.com/martijn00))
+- Fixing crash on UWP in Release due to plugin [\#2844](https://github.com/MvvmCross/MvvmCross/pull/2844) ([nickrandolph](https://github.com/nickrandolph))
+
+**Closed issues:**
+
+- Source viewmodel in CreateBindingSet is ignored [\#2946](https://github.com/MvvmCross/MvvmCross/issues/2946)
+- IMvxMessenger plugin is not loaded, MvxIoCResolveException [\#2937](https://github.com/MvvmCross/MvvmCross/issues/2937)
+- \[Discussion\]Versioning and Release Schedule [\#2798](https://github.com/MvvmCross/MvvmCross/issues/2798)
+- \(6.0\) Plugins not loaded unless explicitly referenced [\#2923](https://github.com/MvvmCross/MvvmCross/issues/2923)
+- I'ts impossible to use custom MvxSuspensionManager in UWP projects [\#2882](https://github.com/MvvmCross/MvvmCross/issues/2882)
+- All bindings stop working when using {Binding Source={x:Reference this}, Path=ViewModel.property} in Xaml derived from MvxContentView\<TViewModel\> [\#2825](https://github.com/MvvmCross/MvvmCross/issues/2825)
+- MvxFormsAppCompatActivity.OnBackPressed override is broken. [\#2817](https://github.com/MvvmCross/MvvmCross/issues/2817)
+- Add IsOnMainThread to IMvxMainThreadDispatcher [\#2791](https://github.com/MvvmCross/MvvmCross/issues/2791)
+
+**Merged pull requests:**
+
+- Adding SignClient, updating unit test runner + security fixes [\#2949](https://github.com/MvvmCross/MvvmCross/pull/2949) ([Cheesebaron](https://github.com/Cheesebaron))
+- Fixing WPF XF build - version mismatch on XF reference [\#2944](https://github.com/MvvmCross/MvvmCross/pull/2944) ([nickrandolph](https://github.com/nickrandolph))
+- \#2904 Fix activity handle on current top activity. [\#2941](https://github.com/MvvmCross/MvvmCross/pull/2941) ([Thetyne](https://github.com/Thetyne))
+- Fix for unable to resolve plugins in Playground samples [\#2938](https://github.com/MvvmCross/MvvmCross/pull/2938) ([flyingxu](https://github.com/flyingxu))
+- Ui split view controller crash trying close null view [\#2935](https://github.com/MvvmCross/MvvmCross/pull/2935) ([alinkhart](https://github.com/alinkhart))
+- Updating Xamarin Forms version [\#2933](https://github.com/MvvmCross/MvvmCross/pull/2933) ([nickrandolph](https://github.com/nickrandolph))
+- Fixed link to xamarin forms presenter page. [\#2927](https://github.com/MvvmCross/MvvmCross/pull/2927) ([markuspalme](https://github.com/markuspalme))
+- Add InOnMainThread [\#2921](https://github.com/MvvmCross/MvvmCross/pull/2921) ([david-laundav](https://github.com/david-laundav))
+- Patch 1 [\#2915](https://github.com/MvvmCross/MvvmCross/pull/2915) ([sergeyyurkov](https://github.com/sergeyyurkov))
+- Fix failing unit tests [\#2914](https://github.com/MvvmCross/MvvmCross/pull/2914) ([Cheesebaron](https://github.com/Cheesebaron))
+- Small fixes in documentation [\#2909](https://github.com/MvvmCross/MvvmCross/pull/2909) ([robvanuden](https://github.com/robvanuden))
+- Reducing parameters on viewmodel [\#2908](https://github.com/MvvmCross/MvvmCross/pull/2908) ([nickrandolph](https://github.com/nickrandolph))
+- Fixing Android/Mac Forms build issue [\#2907](https://github.com/MvvmCross/MvvmCross/pull/2907) ([nickrandolph](https://github.com/nickrandolph))
+- Make custom Suspensionmanager possible [\#2902](https://github.com/MvvmCross/MvvmCross/pull/2902) ([martijn00](https://github.com/martijn00))
+- Typed hint on AppStart and documentation [\#2901](https://github.com/MvvmCross/MvvmCross/pull/2901) ([martijn00](https://github.com/martijn00))
+- MvxSimpleTableViewSource for include ViewCell designir in storyboard. [\#2897](https://github.com/MvvmCross/MvvmCross/pull/2897) ([andrechi1](https://github.com/andrechi1))
+- log4net 2.0.8 netstandard compatibility fix [\#2896](https://github.com/MvvmCross/MvvmCross/pull/2896) ([StevenBonePgh](https://github.com/StevenBonePgh))
+- Update WPF version too, to avoid NuGet restore complaining about downgrade [\#2890](https://github.com/MvvmCross/MvvmCross/pull/2890) ([Cheesebaron](https://github.com/Cheesebaron))
+- Remove msbuild workaround [\#2889](https://github.com/MvvmCross/MvvmCross/pull/2889) ([martijn00](https://github.com/martijn00))
+- Xamarin Forms version bump [\#2887](https://github.com/MvvmCross/MvvmCross/pull/2887) ([nickrandolph](https://github.com/nickrandolph))
+- documentation: MvxLinearLayout [\#2879](https://github.com/MvvmCross/MvvmCross/pull/2879) ([Cheesebaron](https://github.com/Cheesebaron))
+- documentation: add swipe to refresh android docs [\#2878](https://github.com/MvvmCross/MvvmCross/pull/2878) ([Cheesebaron](https://github.com/Cheesebaron))
+- Correct behviour for ViewModel Lifecycle for UWP [\#2875](https://github.com/MvvmCross/MvvmCross/pull/2875) ([ueman](https://github.com/ueman))
+- Add Forms WPF into the solution [\#2874](https://github.com/MvvmCross/MvvmCross/pull/2874) ([martijn00](https://github.com/martijn00))
+- Update the-tip-calc-navigation.md [\#2873](https://github.com/MvvmCross/MvvmCross/pull/2873) ([Raidervz](https://github.com/Raidervz))
+- Handling back pressed for Forms applications [\#2869](https://github.com/MvvmCross/MvvmCross/pull/2869) ([nickrandolph](https://github.com/nickrandolph))
+- Added recursive method to search for referenced assemblies and load t… [\#2865](https://github.com/MvvmCross/MvvmCross/pull/2865) ([rdorta](https://github.com/rdorta))
+- Update to Forms 3.0 [\#2864](https://github.com/MvvmCross/MvvmCross/pull/2864) ([martijn00](https://github.com/martijn00))
+- documentation: Added UIRefreshControl docs [\#2861](https://github.com/MvvmCross/MvvmCross/pull/2861) ([Cheesebaron](https://github.com/Cheesebaron))
+- Improve MvvmCross Getting Started Experience \(ReadMe Content & Sample Files\) [\#2858](https://github.com/MvvmCross/MvvmCross/pull/2858) ([andrewtechhelp](https://github.com/andrewtechhelp))
+- Implement MvxWindowsPage.ClearBackStack [\#2855](https://github.com/MvvmCross/MvvmCross/pull/2855) ([andrechi1](https://github.com/andrechi1))
+- \[documentation\] fixing Next link for UWP project [\#2853](https://github.com/MvvmCross/MvvmCross/pull/2853) ([halex2005](https://github.com/halex2005))
+- Fixes \#2736 [\#2852](https://github.com/MvvmCross/MvvmCross/pull/2852) ([tbalcom](https://github.com/tbalcom))
+- Fix usings in TipCalcTutorial [\#2850](https://github.com/MvvmCross/MvvmCross/pull/2850) ([gentilijuanmanuel](https://github.com/gentilijuanmanuel))
+- Updates "Requesting presentation changes" documentation for MvvmCross 6 [\#2849](https://github.com/MvvmCross/MvvmCross/pull/2849) ([tbalcom](https://github.com/tbalcom))
+- TipCalc Tutorial: Assets improvements & typos [\#2845](https://github.com/MvvmCross/MvvmCross/pull/2845) ([nmilcoff](https://github.com/nmilcoff))
+- Amended LinkerPleaseInclude \(iOS\) example [\#2843](https://github.com/MvvmCross/MvvmCross/pull/2843) ([JoeCooper](https://github.com/JoeCooper))
+- Use legacy properties on the Android TimePicker for versions 5.1 and … [\#2841](https://github.com/MvvmCross/MvvmCross/pull/2841) ([JimWilcox3](https://github.com/JimWilcox3))
+- fix mvvmcross-overview link [\#2839](https://github.com/MvvmCross/MvvmCross/pull/2839) ([halex2005](https://github.com/halex2005))
+- housekeeping: use https [\#2837](https://github.com/MvvmCross/MvvmCross/pull/2837) ([ghuntley](https://github.com/ghuntley))
+- Revitalize Tipcalc tutorial [\#2835](https://github.com/MvvmCross/MvvmCross/pull/2835) ([nmilcoff](https://github.com/nmilcoff))
+- Consolidate samples into one playground [\#2828](https://github.com/MvvmCross/MvvmCross/pull/2828) ([martijn00](https://github.com/martijn00))
+- Allow options to be supplied to IocConstruct [\#2814](https://github.com/MvvmCross/MvvmCross/pull/2814) ([martijn00](https://github.com/martijn00))
+- Implement basic infrastructure for Tizen and Tizen.Forms [\#2669](https://github.com/MvvmCross/MvvmCross/pull/2669) ([martijn00](https://github.com/martijn00))
+
+## [6.1.0-beta2](https://github.com/MvvmCross/MvvmCross/tree/6.1.0-beta2) (2018-06-05)
+[Full Changelog](https://github.com/MvvmCross/MvvmCross/compare/6.1.0-beta1...6.1.0-beta2)
+
+**Closed issues:**
+
+- UWP Dependency Injection on startup [\#2925](https://github.com/MvvmCross/MvvmCross/issues/2925)
+- Object reference not set to an instance of an object in MvxChainedSourceBinding.Dispose [\#2922](https://github.com/MvvmCross/MvvmCross/issues/2922)
+
+## [6.1.0-beta1](https://github.com/MvvmCross/MvvmCross/tree/6.1.0-beta1) (2018-05-30)
+[Full Changelog](https://github.com/MvvmCross/MvvmCross/compare/6.0.1...6.1.0-beta1)
+
+**Fixed bugs:**
+
+- ViewModel\#Destroy does not get called on UWP [\#2860](https://github.com/MvvmCross/MvvmCross/issues/2860)
+- Soft back button doesn't work in Playground.Android [\#2736](https://github.com/MvvmCross/MvvmCross/issues/2736)
+
+**Closed issues:**
+
+- Backstack in mvvmcross android working incorrectly [\#2913](https://github.com/MvvmCross/MvvmCross/issues/2913)
+- SplashScreen doesn't automatically start Activity registered for AppStart [\#2895](https://github.com/MvvmCross/MvvmCross/issues/2895)
+- UWP Release Builds are crashing at runtime [\#2842](https://github.com/MvvmCross/MvvmCross/issues/2842)
+- MvxTimePicker won't bind correctly to Android versions 5.1 and below. [\#2840](https://github.com/MvvmCross/MvvmCross/issues/2840)
+- stamp $\(AssemblyName\) \($\(TargetFramework\)\) into builds  [\#2836](https://github.com/MvvmCross/MvvmCross/issues/2836)
+
+**Merged pull requests:**
+
+- Fixing CI Build [\#2912](https://github.com/MvvmCross/MvvmCross/pull/2912) ([nickrandolph](https://github.com/nickrandolph))
+
 ## [6.0.1](https://github.com/MvvmCross/MvvmCross/tree/6.0.1) (2018-04-29)
 [Full Changelog](https://github.com/MvvmCross/MvvmCross/compare/6.0.0...6.0.1)
 
@@ -14,8 +155,8 @@
 - Error when using the Initialize event in a view model since upgrade to Version 6.0 [\#2808](https://github.com/MvvmCross/MvvmCross/issues/2808)
 - MvvmCross.Platforms.Android namespace missing from MvvmCross 6.0.0 package [\#2807](https://github.com/MvvmCross/MvvmCross/issues/2807)
 - Documentation request [\#2806](https://github.com/MvvmCross/MvvmCross/issues/2806)
-- MvxFormsIosSetup.CreateViewPresenter called too soon? [\#2802](https://github.com/MvvmCross/MvvmCross/issues/2802)
 - Resource.Layout' does not contain a definition for '\[ViewName\]' [\#2801](https://github.com/MvvmCross/MvvmCross/issues/2801)
+- MvxFormsIosSetup.CreateViewPresenter called too soon? [\#2802](https://github.com/MvvmCross/MvvmCross/issues/2802)
 
 **Merged pull requests:**
 
