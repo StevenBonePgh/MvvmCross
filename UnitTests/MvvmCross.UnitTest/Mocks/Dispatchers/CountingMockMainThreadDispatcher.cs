@@ -12,8 +12,11 @@ namespace MvvmCross.UnitTest.Mocks.Dispatchers
     {
         public int Count { get; set; }
 
+        public override bool IsOnMainThread => true;
+
         public override bool RequestMainThreadAction(Action action, bool maskExceptions = true)
         {
+            action();
             Count++;
             return true;
         }
